@@ -15,7 +15,7 @@
 }
 
 #container {
-    border: 1px solid black;
+    border-left: 1px solid black;
     width: 75%;
 }
 
@@ -24,13 +24,14 @@
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    border: 1px solid black;
+    margin: 1rem 0;
+    /* border: 1px solid black; */
 }
 
 .image-container {
     height: 200px;
     width: 30%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -49,7 +50,7 @@
 
 .rest-container {
     width: 70%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     padding: 0.8rem 1rem;
@@ -82,4 +83,31 @@
 
 .details-container .details-ul-list {
     list-style-type: disc;
+}
+
+.price-container {
+    margin: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-container .item-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.price-container .discounted-price {
+    color: rgb(40, 40, 40);
+}
+
+.price-container .discounted-price .item-discount {
+    font-weight: bold;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.hr-line {
+    background-color: rgb(150, 150, 150);
+    height: 1px;
+    width: 100%;
 }

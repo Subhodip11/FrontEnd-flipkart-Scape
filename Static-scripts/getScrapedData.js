@@ -60,9 +60,11 @@ async function getData(searchValue) {
 </div>
 <div class="price-container">
     <div class="item-price">${await data[i].itemPrice}</div>
-    <div class="item-actual-price">${await data[i].itemActualPrice}
-    </div>
-    <div class="item-discount">${await data[i].itemPriceDiscount}   
+    <div class='discounted-price'>
+        <div class="item-actual-price"><strike>${await data[i].itemActualPrice}</strike>
+        </div>
+        <div class="item-discount">(${await data[i].itemPriceDiscount})
+        </div>
     </div>
 </div>
 </div>
@@ -71,11 +73,14 @@ async function getData(searchValue) {
 `;
 
             itemSelector.innerHTML = HTML;
+            let hrLine = document.createElement('div');
+            hrLine.setAttribute('class', 'hr-line')
             containerSelector.appendChild(itemSelector);
+            containerSelector.appendChild(hrLine)
 
         }
 
     }
 }
 
-getData("wasing machine")
+getData("philips mixer grinder")
