@@ -4,7 +4,7 @@ const cherrio = require('cheerio');
 
 const fetchData = async(searchFor) => {
     let pageNo = 1;
-    const pageLimit = 1;
+    const pageLimit = 2;
     let totalResponseData = []
         // console.log(searchFor)
     while (pageNo <= pageLimit) {

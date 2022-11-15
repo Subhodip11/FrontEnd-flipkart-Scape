@@ -2,7 +2,7 @@ let containerSelector = document.getElementById('container');
 document.getElementById('search-btn').addEventListener('click', (e) => {
     containerSelector.innerHTML = ''
     const searchValue = document.getElementById('input-box').value;
-    getData("mobile")
+    getData(searchValue)
 
 })
 
