@@ -21,6 +21,7 @@ const fetchData = async(searchFor) => {
             },
             gzip: true
         })
+
         if (response) {
             const responseData = await formatData(response);
             for (let i = 0; i < responseData.length; i++)
@@ -45,7 +46,7 @@ const formatData = async(html) => {
 
 
     //Extracting all the images from the divs
-    const image = $(`div[class='_2kHMtA'] > a[class='_1fQZEK'] > div[class='MIXNux'] > div[class='_2QcLo-'] > div > div[class='CXW8mj'] > img[class='_396cs4 _3exPp9']`);
+    const image = $(`div[class='_2kHMtA'] > a[class='_1fQZEK'] > div[class='MIXNux'] > div[class='_2QcLo-'] > div > div[class='CXW8mj'] > img[class='_396cs4']`);
     // console.log(image.attr('src'))
     image.each((i, ele) => {
         let imageObjects = ele.attributes;
